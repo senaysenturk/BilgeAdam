@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/index.ico">
+    <title>Size Nasıl Yardımcı Olabilirim? | Bilge Adam</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/typeahead.bundle.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var iller = ['Adana', 'Adıyaman', 'Afyonkarahisar', 'Ağrı', 'Amasya', 'Ankara', 'Antalya', 'Artvin', 'Aydın', 'Balıkesir', 'Bilecik', 'Bingöl', 'Bitlis', 'Bolu', 'Burdur', 'Bursa', 'Çanakkale', 'Çankırı', 'Çorum', 'Denizli', 'Diyarbakır', 'Edirne', 'Elazığ', 'Erzincan', 'Erzurum', 'Eskişehir', 'Gaziantep', 'Giresun', 'Gümüşhane', 'Hakkâri', 'Hatay', 'Isparta', 'İçel (Mersin)', 'İstanbul', 'İzmir', 'Kars', 'Kastamonu', 'Kayseri', 'Kırklareli', 'Kırşehir', 'Kocaeli', 'Konya', 'Kütahya', 'Malatya', 'Manisa', 'Kahramanmaraş', 'Mardin', 'Muğla', 'Muş', 'Nevşehir', 'Niğde', 'Ordu', 'Rize', 'Sakarya', 'Samsun', 'Siirt', 'Sinop', 'Sivas', 'Tekirdağ', 'Tokat', 'Trabzon', 'Tunceli', 'Şanlıurfa', 'Uşak', 'Van', 'Yozgat', 'Zonguldak', 'Aksaray', 'Bayburt', 'Karaman', 'Kırıkkale', 'Batman', 'Şırnak', 'Bartın', 'Ardahan', 'Iğdır', 'Yalova', 'Karabük', 'Kilis', 'Osmaniye', 'Düzce'];
+
+            var iller = new Bloodhound({
+                datumTokenizer: Bloodhound.tokenizers.whitespace,
+                queryTokenizer: Bloodhound.tokenizers.whitespace,
+                local: iller
+            });
+
+
+            $('.typeahead').typeahead({
+                    hint: true,
+                    highlight: true,
+                    minLength: 1 
+                },
+                {
+                    name: 'iller',
+                    source: iller
+                });
+        });
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img src="img/ba-logo.png"></a>
+        </div>
+        <ul class="nav navbar-nav navbar-right ">
+            <li><a href="#"></span> Hizmet Kataloğu</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Giriş</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="text-center">
+    <div class="bgimg">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <h1 class="mb-5" style="color: white">Size Nasıl Yardımcı Olabiliriz?</h1>
+
+                    <div class="search-wrapper">
+                        <form>
+                            <input type="text" name="focus" class="typeahead tt-query" autocomplete="off"
+                                   spellcheck="false"
+                                   placeholder="Lütfen Anahtar Kelime Giriniz. Ör: email problemi"/>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-istek"><img src="img/istek-bildir.jpg">İstek Bildir</button>
+            </div>
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-sorun"><img src="img/sorun-bildir.jpg">Sorun Bildir</button>
+            </div>
+            <div class="col-lg-4">
+                <button type="button" class="btn btn-kayit"><img src="img/tum-kayitlar.jpg">Tüm Kayıtlarım</button>
+            </div>
+        </div>
+        <h3>Duyurular</h3>
+        <p>Buraya duyurular gelecek</p>
+    </div>
+</section>
+</body>
+</html>
